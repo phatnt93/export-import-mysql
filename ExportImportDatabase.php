@@ -201,9 +201,6 @@ class ExportImportDatabase
             if (count($this->exportDatabases) == 0) {
                 throw new \Exception('No database name to export');
             }
-            echo "<pre>";
-            var_dump($this->exportDatabases);
-            die;
             foreach ($this->exportDatabases as $ked => $vedName) {
                 $cmdStr = implode(' ', [
                     $this->mysqldumpPath,
