@@ -55,3 +55,27 @@ $exdb = new ExportImportDatabase([
 // $exdb->export();
 // $exdb->import();
 ```
+
+# CLI - Getting started
+- Edit config.ini
+```
+[export]
+excludes_db = "phpmyadmin, test, mysql, information_schema, performance_schema"
+export_databases = ""
+db_host = "localhost"
+db_user = "root"
+db_pass = ""
+mysqldump_path = "D:\xampp\mysql\bin\mysqldump.exe"
+
+[import]
+db_host = "localhost"
+db_user = "root"
+db_pass = ""
+dir_name = ""
+mysql_path = "D:\xampp\mysql\bin\mysql.exe"
+```
+
+- Run script to export / import
+```
+php ExportImportDatabaseCLI.php [export|import]
+```
